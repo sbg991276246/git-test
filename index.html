@@ -14,5 +14,24 @@
    <pre>ok 终成功了，提交push拉取pull,这是在GitHub上修改的，看看能不能在本地仓库git pull</pre>
    <pre>本地文件修改之后实现git add . 提交git commit -m “修改日志记录” ，然后git push</pre>
    <pre>20211106修改</pre>
+
+   <script>
+      function hex2rgb(hex) {
+          var hex1 = hex.substring(1),b = [];
+          if(hex1.length > 3){
+            var a = hex1;
+            b[0] = parseInt("0x"+a.substring(0,2));
+            b[1] = parseInt("0x"+a.substring(2,4));
+            b[2] = parseInt("0x"+a.substring(4,6));
+          }else{
+            var a = hex1.split('');
+            for(var i=0;i<a.length;i++){
+              b[i] = parseInt("0x"+a[i]+a[i]);
+            }
+          }
+          console.log('rgb:','rgb('+b[0]+','+b[1]+','+b[2]+')');
+      }
+      hex2rgb('#ff00ff');
+   </script>
 </body>
 </html>
